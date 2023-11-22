@@ -27,7 +27,7 @@
   <script>
     function RaditSaturu(){
        document.getElementById("RadamaisSaturs").style.display = "block";
-       document.getElementById("PogaMazak").style.display = "block";
+       document.getElementById("PogaMazak").style.display = "inline";
        document.getElementById("PogaRadit").style.display = "none";
        document.getElementById("MainasSaturs").innerHTML = "tagad ir savādāks teksts ar <h3>Virsrakstu</h3>";
        document.getElementById("virsraksts1").style.fontSize= "5rem";
@@ -36,10 +36,13 @@
     function PasleptSaturu(){
       document.getElementById("RadamaisSaturs").style.display="none"
       document.getElementById("PogaMazak").style.display="none"
-      document.getElementById("PogaRadit").style.display = "block";
+      document.getElementById("PogaRadit").style.display = "inline";
       document.getElementById("MainasSaturs").innerHTML = "paragraph kas mainīsies uz tekstu ar virsrakstu";
       document.getElementById("virsraksts1").style.fontSize= "1rem";
 
+    }
+    function MainitBildi(){
+      document.getElementById("bilde").src="https://cdn.britannica.com/25/172925-050-DC7E2298/black-cat-back.jpg"
     }
   
   </script>
@@ -50,19 +53,19 @@
     table, th, td {border : 4px solid rgb(102, 102, 110)}
    </style>
  
-  <a href="https://www.y8.com/">games</a>
+  
 
   <div class="container text-center">
     <div class="row">
       
     
       <div class="col-12 col-lg-3">
-        <img class="img-fluid" src="https://th.bing.com/th/id/OIP.EN6A1y85FjQAkla8uQpHsQHaFB?pid=ImgDet&rs=1">
-      
+        <img id="bilde"  class="img-fluid" src="https://th.bing.com/th/id/OIP.EN6A1y85FjQAkla8uQpHsQHaFB?pid=ImgDet&rs=1">
       </div>
+      <button id="mbilde" onclick="MainitBildi()" class="button">Mainīt bildi</button>
       <div class="col-md-9">
         <h3 id="virsraksts1">Virsraksts</h3>
-        <h3> <font size="5">Virsraksts</font> </h3>
+        <h3> <fontsize="5">Virsraksts</fontsize> </h3>
       
 
     <p>sdjbjkjjhsdjhiasRRRRRRRAAAAAHHHHHHseujtgaeraaeryhaery</p>
@@ -76,6 +79,7 @@
     </div>
      <button id="PogaMazak" onclick="PasleptSaturu()" class="button">Rādīt mazāk</button>
     <div id="MainasSaturs"> <p>paragraph kas mainīsies uz tekstu ar virsrakstu</p> </div>
+    <a href="https://www.y8.com/">Ārēja saite</a>
       </div>
     </div>
   </div>
